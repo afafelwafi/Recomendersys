@@ -1,0 +1,153 @@
+{% extends 'site_template.html' %}
+<!-- Add icon library -->
+
+
+
+{% block body %}
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+  <!-- Bootstrap Core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/static/css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="/static/css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/static/css/table.css" rel="stylesheet" type="text/css">
+
+
+<div id="page-wrapper">
+
+         <div class="container-fluid">
+		 
+		
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Produits populaires
+                            <small></small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="/">Cleed</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-file"></i>Produits populaires
+                            </li>
+							
+                        </ol>
+						
+						
+                    </div>
+					<article class="col-lg-3">
+					
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <a href="{{ user.reco.split( )[0]}}" title="Nature Portfolio" class="zoom" data-title="Amazing Nature" data-footer="The beauty of nature" data-type="image" data-toggle="lightbox">
+                        <img src="{{ user.reco.split( )[0]}}" alt="{{ user.reco.split( )[0]}}" class="image1" />
+                        <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+		
+                    </a>
+                </div>
+                <div class="panel-footer">
+                    <h4><a href="#" title="Nature Portfolio"></a></h4>
+                    <span class="pull-right">
+                        <i id="like1" class="glyphicon glyphicon-thumbs-up"></i> <div id="like1-bs3"></div>
+                        <i id="dislike1" class="glyphicon glyphicon-thumbs-down"></i> <div id="dislike1-bs3"></div>
+						<script>
+						$(document).ready(function() {              
+							$('i.glyphicon-thumbs-up, i.glyphicon-thumbs-down').click(function(){    
+								var $this = $(this),
+								c = $this.data('count');    
+								if (!c) c = 0;
+								c++;
+								$this.data('count',c);
+								$('#'+this.id+'-bs3').html(c);
+							});   
+							/*$('i.glyphicon-thumbs-up, i.glyphicon-thumbs-down').click(function(){$('img.image1').attr("src", "{{ user.reco.split( )[1]}}");})*/
+
+							$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+								event.preventDefault();
+								$(this).ekkoLightbox();
+							});                                        
+						}); 
+						</script>		
+                    </span>
+                </div>
+            </div>
+        </article>
+
+        <article class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <a href="{{ user.reco.split( )[1]}}" title="Food Portfolio" class="zoom" data-title="Delicious Food" data-footer="Whatever your desire" data-type="image" data-toggle="lightbox">
+                        <img src="{{ user.reco.split( )[1]}}" alt="{{user.reco.split( )[1]}}" />
+                        <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                    </a>
+                </div>
+                <div class="panel-footer">
+                    <h4><a href="#" title="Food Portfolio"></a></h4>
+                    <span class="pull-right">
+                        <i id="like2" class="glyphicon glyphicon-thumbs-up"></i> <div id="like2-bs3"></div>
+                        <i id="dislike2" class="glyphicon glyphicon-thumbs-down"></i> <div id="dislike2-bs3">
+										
+												
+						</div>
+												
+                    </span>
+                </div>
+            </div>
+        </article>
+
+        <article class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <a href="{{ user.reco.split( )[2]}}" title="Sports Portfolio" class="zoom" data-title="Radical Sports" data-footer="This are the best moments" data-type="image" data-toggle="lightbox">
+                        <img src="{{ user.reco.split( )[2]}}" alt="{{ user.reco.split( )[2]}}" />
+                        <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                    </a>
+                </div>
+                <div class="panel-footer">
+                    <h4><a href="#" title="Sports Portfolio" title="Sports"></a></h4>  
+                    <span class="pull-right">
+                        <i id="like3" class="glyphicon glyphicon-thumbs-up"></i> <div id="like3-bs3"></div>
+                        <i id="dislike3" class="glyphicon glyphicon-thumbs-down"></i> <div id="dislike3-bs3"></div>
+                    </span>
+                </div>
+            </div>
+        </article>
+
+        <article class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <a href="{{ user.reco.split( )[3]}}" title="People Portfolio" class="zoom" data-title="Beautiful People" data-footer="We create relationships" data-type="image" data-toggle="lightbox">
+                        <img src="{{ user.reco.split( )[3]}}" alt="{{ user.reco.split( )[3]}}" />
+                        <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                    </a>
+                </div>
+                <div class="panel-footer">
+                    <h4><a href="#" title="People Portfolio"></a></h4>  
+                    <span class="pull-right">
+                        <i id="like4" class="glyphicon glyphicon-thumbs-up"></i> <div id="like4-bs3"></div>
+                        <i id="dislike4" class="glyphicon glyphicon-thumbs-down"></i> <div id="dislike4-bs3"></div>
+                    </span>
+                </div>
+            </div>
+        </article>                                              
+                </div>
+        </div>
+	<script src="/static/js/table.js" type="text/javascript" ></script>
+
+
+	<!-- /#page-wrapper -->
+{% endblock %}
+

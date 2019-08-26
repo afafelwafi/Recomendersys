@@ -1,0 +1,125 @@
+{% extends 'site_template.html' %}
+	
+<script src='/static/js/profil.js'></script>
+
+{% block body %}
+
+
+    <div class="container">
+	<div class="row">              
+		 <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Profil
+                            <small></small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="/">Cleed</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-file"></i>Profil
+                            </li>
+							
+                        </ol>
+						
+						
+                    </div>
+        
+        
+       <div class="col-md-7 ">
+
+   <div class="panel-body">
+       
+    <div class="box box-info">
+        
+            <div class="box-body">
+                     <div class="col-sm-6">
+					 
+                     <img alt="User Pic"  src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image" class="img-circle img-responsive"> 
+                
+                <input id="profile-image-upload" name="profile_photo" placeholder="Photo"  class="hidden" type="file" required="" >
+				
+
+<div style="color:#999;" >click here to change profile image</div>
+                <!--Upload Image Js And Css-->
+				
+				 
+              
+   
+                
+                
+                     
+                     
+                     
+              
+              <br>
+    
+              <!-- /input-group -->
+            </div>
+            <div class="col-sm-6">
+            <h4 style="color:#00b1b1;">{{user.username}}</h4></span>
+              <span><p>{{user.email}}</p></span>            
+            </div>
+            <div class="clearfix"></div>
+            <hr style="margin:5px 0 5px 0;">
+    
+              
+<div class="col-sm-5 col-xs-6 tital " >username:</div><div class="col-sm-7 col-xs-6 ">{{user.username}}</div>
+     <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Email:</div><div class="col-sm-7"> {{user.email}}</div>
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >sizes:</div><div class="col-sm-7">Tops sizes :{{user.sizes.split()[0]}} <br>  Bottoms sizes :{{user.sizes.split()[1]}} <br> Shoes sizes :{{user.sizes.split()[2]}} </div>
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >searched category:</div><div class="col-sm-7">{{user.categories}}</div>
+
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >searched occasion:</div><div class="col-sm-7">{{user.occasion}}</div>
+
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >searched style:</div><div class="col-sm-7">{{user.style}} <br> {{user.reco}} </div>
+
+ <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+
+
+
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+        </div>
+       
+            
+    </div> 
+    </div>
+</div>  
+  
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   </div>
+</div>
+
+
+
+         
+{% endblock %}
+ 
+	 

@@ -1,0 +1,220 @@
+{% extends 'site_template.html' %}
+
+{% block body %}
+
+  <div class="background" style="background-color:white;">
+            <div class="row">
+                               
+                                    <h1 class="col-lg-12" style="padding-left: 20px">Vos préfèrences<h1>
+									   <small></small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard" style="padding-left: 20px"></i>  <a href="/">Cleed</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-file"></i>Préfèrences
+                            </li>
+							
+                        </ol>
+                          
+            
+                            </div>
+               
+                        
+
+
+                        <div class="panel-body">
+                            <div class="row">
+                               
+
+                                    <form id="préfèrences-form" action="/charts" method="post" role="form" style="display: block;" style="background-color:white;">
+                                        <div class="form-group" style=>
+											<h5 style='padding-left:20px'>Selectionner votre taille du haut</h5>
+											<div  class="col-lg-12">
+                                            <select type="text" name="top_size" id="top_size" tabindex="1" class="form-control"
+                                                   placeholder="top_size" value="">
+												
+												   <option> 34
+												   <option> 36
+												   <option> 38
+												   <option> 40
+												   <option> 42
+												   <option> 44
+												   <option> 46
+													<option> 48
+													<option> 50
+											
+											</select>
+												</div>
+											<h5 style='padding-left:20px'>Selectionner votre taille du bat</h5>
+											<div  class="col-lg-12">
+                                            <select type="text" name="bottom_size" id="bottom_size" tabindex="1" class="form-control"
+                                                   placeholder="bottom_size" value="">
+												<option> 34
+												   <option> 36
+												   <option> 38
+												   <option> 40
+												   <option> 42
+												   <option> 44
+												   <option> 46
+													<option> 48
+													<option> 50
+											</select>
+											</div>
+											<h5 style='padding-left:20px'>Selectionner votre taille des chaussures</h5>
+											<div  class="col-lg-12">
+                                            <select type="text" name="shoes_size" id="shoes_size" tabindex="1" class="form-control"
+                                                   placeholder="shoes_size" value="">
+												   <option> 35
+												   <option> 36
+												   <option> 37
+												   <option> 38
+												   <option> 39
+												   <option> 40
+												   <option> 41
+													<option> 42
+													<option> 43
+											</select>
+											</div>
+												<h3 style="padding-left: 20px; padding-top: 20px;">Cherchez vous un style en particulier :</h3>
+												<div class="col-lg-12">
+												    <text>Classic</text>
+												    <!--input data-v-99db9cd2="" name="Basics" type="range" min="1" max="3" step="1" class="slider"-->
+													<input type='radio' name="Style" value='Classic' checked class='buttons' style="padding-right: 20px" >
+											
+									
+												<text>Work</text>
+												<!--input data-v-99db9cd2="" name="Work" type="range" min="1" max="3" step="1" class="slider"-->
+												<input type='radio' name="Style" value='Work' checked class='buttons' style="padding-right: 20px" >
+												
+											
+												<text>Creative</text>
+												<!--input data-v-99db9cd2="" name="Creative" type="range" min="1" max="3" step="1" class="slider"-->
+												<input type='radio' name="Style" value='Creative' checked class='buttons' style="padding-right: 20px" >
+												
+										
+												<text>Casual</text>
+												<!--input data-v-99db9cd2=""  name="Casual" type="range" min="1" max="3" step="1" class="slider"-->
+												<input type='radio' name="Style" value='Casual' checked class='buttons' style="padding-right: 20px" >
+												
+												<text>Sportswear</text>
+												<!--input data-v-99db9cd2=""  name="Casual" type="range" min="1" max="3" step="1" class="slider"-->
+												<input type='radio' name="Style" value='Sportswear' checked class='buttons' style="padding-right: 20px" >
+												
+											</div class="col-lg-12">
+											<h3 style="padding-left: 20px; padding-top: 20px;">Cherchez vous un look pour une occasion en particulier :</h3>
+												<div class="col-lg-12">
+												    <text>Quotidien</text>
+												    <!--input data-v-99db9cd2="" name="Basics" type="range" min="1" max="3" step="1" class="slider"-->
+													<input type='radio' name="Occasion" value='Quotidien' checked class='buttons' style="padding-right: 20px" >
+											
+									
+												<text>Sortie</text>
+												<!--input data-v-99db9cd2="" name="Work" type="range" min="1" max="3" step="1" class="slider"-->
+												<input type='radio' name="Occasion" value='Sortie' checked class='buttons' style="padding-right: 20px" >
+												
+											
+												<text>Festival</text>
+												<!--input data-v-99db9cd2="" name="Creative" type="range" min="1" max="3" step="1" class="slider"-->
+												<input type='radio' name="Occasion" value='Festival' checked class='buttons' style="padding-right: 20px" >
+												
+										
+												<text>Date</text>
+												<!--input data-v-99db9cd2=""  name="Casual" type="range" min="1" max="3" step="1" class="slider"-->
+												<input type='radio' name="Occasion" value='Date' checked class='buttons' style="padding-right: 20px" >
+												
+												<text>Travail</text>
+												<!--input data-v-99db9cd2=""  name="Casual" type="range" min="1" max="3" step="1" class="slider"-->
+												<input type='radio' name="Occasion" value='Travail' checked class='buttons' style="padding-right: 20px" >
+												
+												<text>Mariage</text>
+												<!--input data-v-99db9cd2=""  name="Casual" type="range" min="1" max="3" step="1" class="slider"-->
+												<input type='radio' name="Occasion" value='Mariage' checked class='buttons' style="padding-right: 20px" >
+												
+												<text>Week-end</text>
+												<!--input data-v-99db9cd2=""  name="Casual" type="range" min="1" max="3" step="1" class="slider"-->
+												<input type='radio' name="Occasion" value='Week-end' checked class='buttons' style="padding-right: 20px" >
+												
+												<text>Plage</text>
+												<!--input data-v-99db9cd2=""  name="Casual" type="range" min="1" max="3" step="1" class="slider"-->
+												<input type='radio' name="Occasion" value='Plage' checked class='buttons' style="padding-right: 20px" >
+												
+												<text>Sport</text>
+												<!--input data-v-99db9cd2=""  name="Casual" type="range" min="1" max="3" step="1" class="slider"-->
+												<input type='radio' name="Occasion" value='Sport' checked class='buttons' style="padding-right: 20px" >
+												
+											</div class="col-lg-12">
+                                            <div class="col-lg-12">
+											<section >
+											<div >
+											<h3 style='padding-top:20px'>Votre budget</h3>
+											
+											<div class="budget"  >
+											<h5  style='font-weight: bold'>Gamme de prix</h5>
+											<input type='radio' name="budget" value='€' checked class='buttons' style="padding-right: 20px" >€
+											<input type='radio' name="budget" value='€€' checked class='buttons' style="padding-right: 20px">€€
+											<input type='radio' name="budget" value='€€€' checked class='buttons' style="padding-right: 20px">€€€
+											<input type='radio' name="budget" value='€€€€' checked class='buttons' style="padding-right: 20px">€€€€								
+											</div>
+											</div>
+											<div >
+											<h3>Vous êtes:</h3>
+											
+											<div class="genre" >
+											<input type='radio' name="genre" value='Femme' checked class='buttons' >Femme</button>
+											<input type='radio' name="genre" value='Homme' checked class='buttons'>Homme</button>
+											
+								
+											</div>
+											<div>
+											<h3>Vous Cherchez:</h3>
+											
+											<div class="category" >
+											<input type='radio' name="category" value='Robes' checked class='buttons' >Robes</button>
+											<input type='radio' name="category" value='Accessoires' checked class='buttons'>Accessoires</button>
+											<input type='radio' name="category" value='Chaussures' checked class='buttons'>Chaussures</button>
+											<input type='radio' name="category" value='Jupes' checked class='buttons'>Jupes</button>
+											<input type='radio' name="category" value='Pantalons' checked class='buttons'>Pantalons</button>
+											<input type='radio' name="category" value='Vestes & Manteaux' checked class='buttons'>Vestes & Manteaux</button>
+											<input type='radio' name="category" value='Chemises' checked class='buttons'>Chemises</button>
+											<input type='radio' name="category" value='Shorts' checked class='buttons'>Shorts</button>
+											<input type='radio' name="category" value='Pulls & Sweats' checked class='buttons'>Pulls & Sweats</button>
+											<input type='radio' name="category" value='Tshirts' checked class='buttons'>Tshirts</button>
+											<input type='radio' name="category" value='Tops' checked class='buttons'>Tops</button>
+											<input type='radio' name="category" value='Sous-Vêtements' checked class='buttons'>Sous-Vêtements</button><br>
+											<input type='radio' name="category" value='Costumes' checked class='buttons'>Costumes</button>
+											<input type='radio' name="category" value='Pyjamas' checked class='buttons'>Pyjamas</button>
+											<input type='radio' name="category" value='Maillots de bain' checked class='buttons'>Maillots de bain</button>
+
+											
+											
+								
+											</div>
+											</div>
+											</section>
+											<div class="col-lg-12" style=' padding-top: 50px'>
+											<input type="submit" name="preferences-submit" id="preferences-submit" tabindex="4"
+                                                           class="form-control btn btn-login" value="submit" style='background-color:gray; padding-left:20px'>
+											</div>
+                                    
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- /#page-wrapper -->
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
